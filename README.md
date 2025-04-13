@@ -1,8 +1,6 @@
 # Serenify
 
-<p align="center">
-  <img src="assets/icons/app_icon.png" alt="Serenify Logo" width="120"/>
-</p>
+![Serenify Logo](assets/icons/app_icon.png)
 
 ## Overview
 
