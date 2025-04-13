@@ -35,7 +35,23 @@ Serenify is a comprehensive mental health companion app designed to help users t
 
 ## Screenshots
 
-[Screenshots of key app screens would be placed here]
+### Home Screen
+![Home Screen](assets/screenshots/home_screen.png)
+
+### Mood Tracker
+![Mood Tracker](assets/screenshots/Moodtracker_screen.png)
+
+### Chatbot
+![Chatbot](assets/screenshots/chatbot_screen.png)
+
+### Options
+![Options](assets/screenshots/options_screen.png)
+
+### Login Screen
+![Login](assets/screenshots/login_screen.png)
+
+### Loading Screen
+![Loading](assets/screenshots/load_screen.png)
 
 ## Technology Stack
 
