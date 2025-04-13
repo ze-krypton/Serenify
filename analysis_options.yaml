@@ -1,0 +1,121 @@
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+#
+# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
+# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
+# invoked from the command line by running `flutter analyze`.
+
+# The following line activates a set of recommended lints for Flutter apps,
+# packages, and plugins designed to encourage good coding practices.
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  errors:
+    missing_required_param: error
+    missing_return: error
+    avoid_slow_async_io: error
+    avoid_print: warning
+    avoid_empty_else: warning
+    avoid_relative_lib_imports: warning
+    avoid_types_as_parameter_names: warning
+    avoid_unused_constructor_parameters: warning
+    cancel_subscriptions: warning
+    constant_identifier_names: warning
+    empty_catches: warning
+    empty_constructor_bodies: warning
+    library_names: warning
+    library_prefixes: warning
+    no_duplicate_case_values: warning
+    null_check_on_nullable_type_parameter: warning
+    prefer_const_constructors: warning
+    prefer_const_declarations: warning
+    prefer_final_fields: warning
+    prefer_final_locals: warning
+    prefer_is_empty: warning
+    prefer_is_not_empty: warning
+    prefer_typing_uninitialized_variables: warning
+    recursive_getters: warning
+    slash_for_doc_comments: warning
+    type_init_formals: warning
+    unnecessary_brace_in_string_interps: warning
+    unnecessary_const: warning
+    unnecessary_getters_setters: warning
+    unnecessary_new: warning
+    unnecessary_null_in_if_null_operators: warning
+    unnecessary_this: warning
+    unrelated_type_equality_checks: warning
+    use_rethrow_when_possible: warning
+    valid_regexps: warning
+
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "**/*.config.dart"
+    - "**/*.generated.dart"
+    - "**/generated/**"
+    - "**/build/**"
+    - "**/.dart_tool/**"
+    - "**/.idea/**"
+    - "**/.vscode/**"
+    - "**/ios/**"
+    - "**/android/**"
+    - "**/web/**"
+    - "**/windows/**"
+    - "**/linux/**"
+    - "**/macos/**"
+
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: false
+
+linter:
+  # The lint rules applied to this project can be customized in the
+  # section below to disable rules from the `package:flutter_lints/flutter.yaml`
+  # included above or to enable additional rules. A list of all available lints
+  # and their documentation is published at https://dart.dev/lints.
+  #
+  # Instead of disabling a lint rule for the entire project in the
+  # section below, it can also be suppressed for a single line of code
+  # or a specific dart file by using the `// ignore: name_of_lint` and
+  # `// ignore_for_file: name_of_lint` syntax on the line or in the file
+  # producing the lint.
+  rules:
+    - always_declare_return_types
+    - always_require_non_null_named_parameters
+    - annotate_overrides
+    - avoid_empty_else
+    - avoid_relative_lib_imports
+    - avoid_returning_null_for_future
+    - avoid_slow_async_io
+    - avoid_types_as_parameter_names
+    - avoid_unused_constructor_parameters
+    - cancel_subscriptions
+    - constant_identifier_names
+    - empty_catches
+    - empty_constructor_bodies
+    - library_names
+    - library_prefixes
+    - no_duplicate_case_values
+    - null_check_on_nullable_type_parameter
+    - prefer_const_constructors
+    - prefer_const_declarations
+    - prefer_final_fields
+    - prefer_final_locals
+    - prefer_is_empty
+    - prefer_is_not_empty
+    - prefer_typing_uninitialized_variables
+    - recursive_getters
+    - slash_for_doc_comments
+    - type_init_formals
+    - unnecessary_brace_in_string_interps
+    - unnecessary_const
+    - unnecessary_getters_setters
+    - unnecessary_new
+    - unnecessary_null_in_if_null_operators
+    - unnecessary_this
+    - unrelated_type_equality_checks
+    - use_rethrow_when_possible
+    - valid_regexps
+
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options

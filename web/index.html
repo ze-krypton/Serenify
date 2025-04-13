@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A mental health companion app.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Serenify">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <title>Serenify</title>
+  <link rel="manifest" href="manifest.json">
+  
+  
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  
+  
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    var serviceWorkerVersion = null;
+  </script>
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDemoKeyForTestingPurposesOnly",
+      authDomain: "serenify-demo.firebaseapp.com",
+      projectId: "serenify-demo",
+      storageBucket: "serenify-demo.appspot.com",
+      messagingSenderId: "123456789012",
+      appId: "1:123456789012:web:demo123456789"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
+</head>
+<body>
+  <style>
+    body {
+      background-color: #DE3C50;
+      height: 100vh;
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-family: Arial, sans-serif;
+      flex-direction: column;
+    }
+    
+    .loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .title {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      letter-spacing: 1.2px;
+    }
+    
+    .subtitle {
+      font-size: 16px;
+      margin-bottom: 36px;
+      opacity: 0.9;
+    }
+    
+    .logo {
+      width: 100px;
+      height: 100px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .logo-icon {
+      width: 60px;
+      height: 60px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="60" viewBox="0 96 960 960" width="60" fill="%23DE3C50"><path d="M480 976q-83 0-156-31.5T197 859q-54-54-85.5-127T80 576q0-83 31.5-156T197 293q54-54 127-85.5T480 176q83 0 156 31.5T763 293q54 54 85.5 127T880 576q0 83-31.5 156T763 859q-54 54-127 85.5T480 976Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Zm-40 120q17 0 28.5-11.5T480 656q0-17-11.5-28.5T440 616q-17 0-28.5 11.5T400 656q0 17 11.5 28.5T440 696Zm80 0q17 0 28.5-11.5T560 656q0-17-11.5-28.5T520 616q-17 0-28.5 11.5T480 656q0 17 11.5 28.5T520 696ZM388 516l32-32q9-9 9-21t-9-21q-9-9-21-9t-21 9l-32 32-32-32q-9-9-21-9t-21 9q-9 9-9 21t9 21l32 32-32 32q-9 9-9 21t9 21q9 9 21 9t21-9l32-32 32 32q9 9 21 9t21-9q9-9 9-21t-9-21l-32-32Zm192 0l32-32q9-9 9-21t-9-21q-9-9-21-9t-21 9l-32 32-32-32q-9-9-21-9t-21 9q-9 9-9 21t9 21l32 32-32 32q-9 9-9 21t9 21q9 9 21 9t21-9l32-32 32 32q9 9 21 9t21-9q9-9 9-21t-9-21l-32-32Z"/></svg>');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s ease-in-out infinite;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+  
+  <div class="loading" id="loading">
+    <div class="logo">
+      <div class="logo-icon"></div>
+    </div>
+    <div class="title">Serenify</div>
+    <div class="subtitle">Your path to mindfulness</div>
+    <div class="spinner"></div>
+  </div>
+  
+  <script>
+    window.addEventListener('load', function(ev) {
+      console.log("Window loaded, initializing Flutter");
+      
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          console.log("Entrypoint loaded");
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            console.log("Engine initialized");
+            appRunner.runApp();
+            // Remove loading indicator once app is loaded
+            document.getElementById('loading').style.display = 'none';
+          }).catch(function(error) {
+            console.error("Error initializing engine:", error);
+            document.body.innerHTML = '<div style="text-align: center; padding: 20px; color: white; background-color: red; border-radius: 10px;">Error initializing Flutter application: ' + error + '</div>';
+          });
+        }
+      }).catch(function(error) {
+        console.error("Error loading Flutter:", error);
+        document.body.innerHTML = '<div style="text-align: center; padding: 20px; color: white; background-color: red; border-radius: 10px;">Error loading Flutter: ' + error + '</div>';
+      });
+    });
+  </script>
+</body>
+</html>

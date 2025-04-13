@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "975691287787",
+    "project_id": "mental-health-348c9",
+    "storage_bucket": "mental-health-348c9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975691287787:android:a80057d814bb7dae4c82ae",
+        "android_client_info": {
+          "package_name": "com.mindmate.mind_mate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP8hYMks6j5VX9KR4kiZrdH-LaBcS_8sg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
