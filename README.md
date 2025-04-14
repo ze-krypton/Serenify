@@ -197,9 +197,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Support
 
 For support, please:
-- Email: support@serenify.com
+- Email: ahmadmustafa921@gmail.com
 - Open an issue in the repository
-- Visit our support site: [support.serenify.com](https://support.serenify.com)
+
 
 ## Acknowledgments
 
